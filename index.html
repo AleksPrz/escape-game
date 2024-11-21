@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title" class="mb-3">Escape from Beyonce</h1>
+        <div class="row">
+            <div class="col-12 col-lg-6 d-flex flex-column align-items-center">
+                <div id="game-area" >
+                    <div id="player" class="personaje"></div>
+                    <div id="beyonce" class="personaje"></div>
+                </div>
+                <button id="btnPlay" class="m-3 btn btn-primary"> Play </button>
+            </div>
+            
+            <audio src="music/Beyonce.mp3"></audio>
+    
+            <div id="config-area" class="col-12 col-lg-6 mb-4">
+                <h3 class="mb-4">Preferences</h3>
+                <form action="" class="bg-light p-4 rounded shadow">
+                    <div class="mb-4">
+                        <label id="lblEnemySpeed" for="bSpeed" class="form-label fw-bold me-3">Beyonce speed: </label>
+                        <input id="bSpeed" type="range" min="0" max="4" value="1">
+                    </div>
+                    <div class="mb-4">
+                        <label for="pSpeed" class="form-label fw-bold me-3">Player speed: </label>
+                        <input id="pSpeed" type="range" min="30" max="50" step="10" value="30">
+                    </div>
+                    <div class="mb-4">
+                        <label for="slcPlayerImg" class="form-label fw-bold me-3">Player: </label>
+                        <select id="slcPlayerImg">
+                            <option value="blue">Blue</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="slcBgImg" class="form-label fw-bold me-3">Background: </label>
+                        <select id="slcBgImg">
+                            <option value="none">None</option>
+                            <option value="grammy.jpg">Grammy</option>
+                            <option value="fdi.jpg">FDI</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="slcEnemyImg" class="form-label fw-bold me-3">Enemy: </label>
+                        <select id="slcEnemyImg">
+                            <option value="Beyonce">Beyonce</option>
+                            <option value="Elon">Elon Musk</option>
+                            <option value="Canepa">The Jefe</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal" tabindex="-1" data-bs-keyboard="false" data-bs-backdrop="static">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Too Bad!</h5>
+            </div>
+            <div class="modal-body">
+              <p>You were chased and brutally killed. <br>But you can always return to life with a little faith and JavaScript.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary">Literally nothing</button>
+              <button type="button" class="btn btn-primary" onclick="restart()">Restart</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>    
+    <script src="app.js"></script>
+</body>
+</html>

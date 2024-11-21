@@ -1,0 +1,24 @@
+#game-area {
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    height: 500px;
+    position: relative;
+    width: 550px;
+
+    background-size: cover;
+}
+
+.personaje {
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
+
+#player {
+    background-color: blue;
+}
+
+#beyonce {
+    background-image: url('img/Beyonce.jpg');
+    background-size: cover;
+}
